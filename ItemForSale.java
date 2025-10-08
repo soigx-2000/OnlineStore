@@ -6,7 +6,7 @@ public class ItemForSale
     protected Date BeginingSaleDate;//month, day, year (mmddyyyy)
     public ItemForSale(){}//default constructor
     public ItemForSale(String name, double price, String creator,
-    int mm_dd_yyyy){
+    String mm_dd_yyyy){
         this.name = name;
         this.price = price;
         this.creator = creator;

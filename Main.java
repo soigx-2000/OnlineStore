@@ -5,11 +5,13 @@ public class Main
 
      public static void main(String[] args)
      {
-        Store s = new Store();
-        // testing code goes here:
-         Book a = new Book("The Great Gatsby", 14.99, "F. Scott Fitzgerald", 10191925, "Scribner", 92418996);
-         Movie b = new Movie("Inception", 4.99, "Christopher Nolan", 07072010, 148);
-         s.addItem(a);
-         s.addItem(b);
+        Store s = new Store();// chat GPT wrote these tests
+        s.addItem(new Book("The Great Gatsby", 10.99, "F. Scott Fitzgerald", "01/01/2020", "Scribner", "09/24/1896"));
+        s.addItem(new Movie("Inception", 14.99, "Christopher Nolan", "02/15/2020", 148));
+        s.showItems();
+        System.out.println("Creator of The Great Gatsby: " + s.creator("The Great Gatsby"));
+        System.out.println("Creator of Inception: " + s.creator("Inception"));
+        s.sellItem("The Great Gatsby");
+        System.out.println("Total profit: $" + s.getProfit());
      }
 }
